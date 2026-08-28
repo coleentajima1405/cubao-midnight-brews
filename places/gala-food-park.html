@@ -1,4 +1,4 @@
-  <style> /* styles */ 
+  <style> /* styles */
     :root {
       --bg-color: #08080a;
       --card-bg: #111116;
@@ -103,7 +103,6 @@
       text-shadow: 0 0 8px rgba(255, 26, 64, 0.6);
     }
 
-    /* FIX: Standardized flex flow so main takes up full height naturally */
     main {
       width: 100%;
       max-width: 850px;
@@ -166,7 +165,32 @@
       font-size: 0.95rem;
     }
 
-    /* FIX: Added margin-top auto to guarantee the footer sits below all page contents */
+    .suggest-box {
+      margin-top: 2.5rem;
+      text-align: center;
+    }
+
+    .suggest-btn {
+      display: inline-block;
+      background: var(--card-bg);
+      color: var(--accent-glow);
+      border: 1px solid var(--accent-crimson);
+      padding: 0.8rem 1.8rem;
+      font-family: 'Georgia', serif;
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      text-decoration: none;
+      border-radius: 4px;
+      transition: all 0.3s ease;
+    }
+
+    .suggest-btn:hover {
+      background: var(--accent-crimson);
+      color: #ffffff;
+      box-shadow: 0 0 15px rgba(255, 26, 64, 0.6);
+    }
+
     footer {
       width: 100%;
       background: #000000;
@@ -228,6 +252,11 @@
           <td>10:00 PM onwards (less crowd, peak ambient night atmosphere)</td>
         </tr>
       </table>
+
+      <div class="suggest-box">
+        <p>Know another place worth adding?</p>
+        <a href="suggest-form.html" class="suggest-btn">Suggest a Place</a>
+      </div>
 
     </article>
   </main>
