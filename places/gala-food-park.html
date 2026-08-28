@@ -1,4 +1,4 @@
-    <style> /* style */
+  <style> /* styles */ 
     :root {
       --bg-color: #08080a;
       --card-bg: #111116;
@@ -103,12 +103,13 @@
       text-shadow: 0 0 8px rgba(255, 26, 64, 0.6);
     }
 
+    /* FIX: Standardized flex flow so main takes up full height naturally */
     main {
       width: 100%;
       max-width: 850px;
       padding: 2.5rem 1rem;
       box-sizing: border-box;
-      flex: 1;
+      flex: 1 0 auto;
     }
 
     .detail-card {
@@ -136,7 +137,6 @@
       font-size: 1.05rem;
     }
 
-    /* Lesson 3.4 details table */
     .details-table {
       width: 100%;
       border-collapse: collapse;
@@ -166,6 +166,7 @@
       font-size: 0.95rem;
     }
 
+    /* FIX: Added margin-top auto to guarantee the footer sits below all page contents */
     footer {
       width: 100%;
       background: #000000;
@@ -175,6 +176,7 @@
       font-size: 0.85rem;
       color: var(--text-muted);
       box-sizing: border-box;
+      margin-top: auto;
     }
   </style>
 </head>
@@ -198,7 +200,7 @@
   <main>
     <article class="detail-card">
       
-      <img src="../images/gala_food_park.jpg" alt="Atmospheric illuminated night view of Gala Food Park in Pasay City" class="hero-image">
+      <img src="../images/gala_food_park.jpeg" alt="Atmospheric illuminated night view of Gala Food Park in Pasay City" class="hero-image">
 
       <div class="description">
         <p>Gala Food Park isn't just an open-air venue—it's an immersive nocturnal escape inspired directly by the glowing street alleys of Tokyo. When night falls over Pasay City, this market lights up with vibrant neon signage, lanterns, and endless steam rising from live cooking stalls.</p>
@@ -236,7 +238,6 @@
         <li><a href="../index.html">Home</a></li>
         <li><a href="../about.html">About</a></li>
         <li><a href="../contact.html">Contact</a></li>
-        <li><a href="../places/warehouse_coffee.html">Read more</a></li>
       </ul>
     </nav>
     <div class="gothic-divider"><span>◆</span></div>

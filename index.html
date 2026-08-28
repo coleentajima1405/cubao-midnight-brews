@@ -1,5 +1,4 @@
-
-  <style> /* style */
+  <style> /* styles */
     :root {
       --bg-color: #08080a;
       --card-bg: #111116;
@@ -174,6 +173,26 @@
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.8);
     }
 
+    /* FULL CARD CLICKABLE OVERLAY STYLES */
+    .clickable-card {
+      position: relative;
+    }
+
+    .card-title-link {
+      color: var(--accent-glow);
+      text-decoration: none;
+    }
+
+    .card-title-link::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 1;
+    }
+
     footer {
       width: 100%;
       background: #000000;
@@ -213,14 +232,17 @@
     <h2>Recommended Haunts</h2>
 
     <div class="places-grid">
-      <article>
+      
+      <article class="clickable-card">
         <div>
-          <h3>Gala Food Park</h3>
+          <h3>
+            <a href="places/gala-food-park.html" class="card-title-link">Gala Food Park</a>
+          </h3>
           <p class="location-tag">Pasay City | Japan-Inspired Food Park</p>
           <div class="gothic-divider"><span>◆</span></div>
-          <p>A neon-drenched sanctuary for late-night food runs. It gives off major Tokyo night-market vibes with a massive lineup of Japanese street eats, gyudon bowls, skewers, and desserts—perfect when you want to indulge your nocturnal cravings in a lively open-air setting.</p>
+          <p>A neon-drenched sanctuary for late-night food runs. It gives off major Tokyo night-market vibes with a massive lineup of Japanese street eats, gyudon bowls, skewers, and desserts.</p>
         </div>
-        <img src="images/gala_food_park.jpg" alt="Gala Food Park">
+        <img src="images/gala_food_park.jpeg" alt="Gala Food Park">
       </article>
 
       <article>
@@ -251,7 +273,6 @@
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="contact.html">Contact</a></li>
-        <li><a href="places/warehouse_coffee.html">Read more</a></li>
       </ul>
     </nav>
     <div class="gothic-divider"><span>◆</span></div>
