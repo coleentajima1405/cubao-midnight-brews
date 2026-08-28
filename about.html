@@ -1,5 +1,4 @@
-
-  <style> /* style */
+    <style> /* style */
     :root {
       --bg-color: #08080a;
       --card-bg: #111116;
@@ -24,6 +23,7 @@
       line-height: 1.6;
     }
 
+    /* header & navigation */
     header {
       width: 100%;
       background: #000000;
@@ -72,19 +72,12 @@
       font-size: 0.8rem;
     }
 
-    nav {
-      width: 100%;
-      display: flex;
-      justify-content: center;
-    }
-
     nav ul {
       list-style: none;
-      padding: 0; /* fixes center offset */
+      padding: 0;
       margin: 1rem 0;
       display: flex;
       justify-content: center;
-      align-items: center;
       gap: 2rem;
     }
 
@@ -104,9 +97,10 @@
       text-shadow: 0 0 8px rgba(255, 26, 64, 0.6);
     }
 
+    /* layout container */
     main {
       width: 100%;
-      max-width: 950px;
+      max-width: 800px;
       padding: 2.5rem 1rem;
       box-sizing: border-box;
       flex: 1;
@@ -123,57 +117,45 @@
     }
 
     .location-tag {
-      font-size: 0.8rem;
+      font-size: 0.85rem;
       text-transform: uppercase;
       letter-spacing: 1.5px;
       color: var(--accent-crimson);
       font-weight: bold;
       margin-bottom: 0.8rem;
+      text-align: center;
     }
 
-    .places-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 2rem;
-      width: 100%;
-    }
-
-    .places-grid article {
+    /* about card */
+    .about-card {
       background: var(--card-bg);
       border: 1px solid var(--border-color);
       border-radius: 4px;
-      padding: 1.8rem;
+      padding: 2.5rem;
       box-sizing: border-box;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
-      text-align: center;
+      align-items: center;
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.9), 0 0 12px rgba(139, 0, 0, 0.2);
-      transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
     }
 
-    .places-grid article:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 6px 25px rgba(0, 0, 0, 0.95), 0 0 18px rgba(255, 26, 64, 0.35);
-      border-color: var(--accent-crimson);
+    .about-card p {
+      margin-bottom: 1.2rem;
+      text-align: justify;
     }
 
-    .places-grid h3 {
-      font-size: 1.4rem;
-      color: var(--accent-glow);
-      margin-bottom: 0.2rem;
-    }
-
-    .places-grid img {
-      width: 100%;
-      height: 280px;
+    /* square owner photo */
+    .about-card img {
+      width: 260px;
+      height: 260px;
       object-fit: cover;
-      border-radius: 4px;
-      border: 1px solid var(--accent-crimson);
-      margin-top: 1.2rem;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.8);
+      border-radius: 8px;
+      border: 2px solid var(--accent-crimson);
+      margin: 1.5rem 0;
+      box-shadow: 0 0 20px rgba(255, 26, 64, 0.25);
     }
 
+    /* footer */
     footer {
       width: 100%;
       background: #000000;
@@ -186,8 +168,9 @@
     }
 
     @media (max-width: 768px) {
-      .places-grid {
-        grid-template-columns: 1fr;
+      .about-card img {
+        width: 200px;
+        height: 200px;
       }
     }
   </style>
@@ -197,7 +180,7 @@
   <header>
     <h1>Cubao Midnight Brews</h1>
     <p class="tagline">A sanctuary for restless souls and dark infusions under the Manila moon.</p>
-    
+
     <div class="gothic-divider"><span>◆</span></div>
 
     <nav>
@@ -210,39 +193,22 @@
   </header>
 
   <main>
-    <h2>Recommended Haunts</h2>
+    <article class="about-card">
+      <h2>The Curator</h2>
+      <p class="location-tag">Juvy Guira | 21 • Future Educator & Tech Enthusiast</p>
+      
+      <div class="gothic-divider"><span>◆</span></div>
 
-    <div class="places-grid">
-      <article>
-        <div>
-          <h3>Gala Food Park</h3>
-          <p class="location-tag">Pasay City | Japan-Inspired Food Park</p>
-          <div class="gothic-divider"><span>◆</span></div>
-          <p>A neon-drenched sanctuary for late-night food runs. It gives off major Tokyo night-market vibes with a massive lineup of Japanese street eats, gyudon bowls, skewers, and desserts—perfect when you want to indulge your nocturnal cravings in a lively open-air setting.</p>
-        </div>
-        <img src="images/gala_food_park.jpg" alt="Gala Food Park">
-      </article>
+      <img src="images/owner_photo.jpg" alt="Juvy Guira">
 
-      <article>
-        <div>
-          <h3>Warehouse Coffee</h3>
-          <p class="location-tag">Sampaloc, Manila | Industrial-Style Student Cafe</p>
-          <div class="gothic-divider"><span>◆</span></div>
-          <p>Tucked right in the heart of the U-Belt, this spot delivers a dark, raw-concrete aesthetic with serious caffeine heavyweights. It's the ultimate dark horse hideout for fueling intense study sessions or retreating from the chaotic Manila heat.</p>
-        </div>
-        <img src="images/warehouse_coffee.jpg" alt="Warehouse Coffee">
-      </article>
-
-      <article>
-        <div>
-          <h3>La Cathedral Cafe</h3>
-          <p class="location-tag">Intramuros, Manila | Rooftop Heritage Cafe</p>
-          <div class="gothic-divider"><span>◆</span></div>
-          <p>Nestled right behind the historic Manila Cathedral, this rooftop gem serves up unmatched view-side dining. The ambient warm lighting, wrought-iron fixtures, and up-close backdrop of Spanish-colonial architecture make it one of the most dramatically romantic places in the walled city for night coffee or a late-afternoon meal.</p>
-        </div>
-        <img src="images/la_cathedral.jpg" alt="La Cathedral Cafe">
-      </article>
-    </div>
+      <p>As an ICT Education major, my daily routine revolves around three main things: troubleshooting code, lesson planning, and chasing the ultimate midnight coffee fix.</p>
+      
+      <p><strong>Why Cubao Midnight Brews?</strong><br>
+      Navigating the intersection of technology and education demands focus, resilience, and caffeine. Manila comes alive after dark, offering quiet sanctuaries away from daytime traffic and noise. This guide was born out of midnight study sessions, late-night coding marathons, and the search for authentic atmospheres that foster creativity.</p>
+      
+      <p><strong>Why Trust These Recommendations?</strong><br>
+      Every spot featured here has been personally vetted during real midnight study sessions. I evaluate venues based on three strict criteria: ambient atmosphere, reliable coffee or food options, and an inspiring environment for nocturnal thinkers.</p>
+    </article>
   </main>
 
   <footer>
