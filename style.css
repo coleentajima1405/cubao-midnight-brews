@@ -39,7 +39,7 @@ h1 {
   text-transform: uppercase;
   letter-spacing: 4px;
   text-shadow: 0 0 15px rgba(255, 26, 64, 0.4);
-  margin: 0 0 0.3rem 0;
+  margin: 0;
 }
 
 h2 {
@@ -83,12 +83,16 @@ h2 {
 }
 
 /* layout regions */
-header {
+header,
+.site-header {
   width: 100%;
   background: #000000;
   border-bottom: 2px solid var(--accent-crimson);
-  padding: 2rem 1rem 1.5rem 1rem;
-  text-align: center;
+  padding: 2.5rem 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
 }
 
 main {
@@ -109,25 +113,24 @@ footer {
   margin-top: auto;
 }
 
-/* navigation fixes (removes all rogue background boxes, borders, and text selection highlights) */
+/* navigation fixes (flexbox layout and link spacing) */
 nav {
-  width: 100%;
   display: flex;
-  justify-content: center;
+  align-items: center;
 }
 
+.site-header nav ul,
 nav ul {
   list-style: none;
   padding: 0;
-  margin: 1rem 0;
+  margin: 0;
   display: flex;
-  justify-content: center;
+  gap: 20px;
   align-items: center;
-  gap: 2rem;
 }
 
 nav li {
-  display: inline-block;
+  /* display: inline-block removed */
 }
 
 nav a,
@@ -162,6 +165,20 @@ nav a:focus {
   background: transparent !important;
   background-color: transparent !important;
   box-shadow: none !important;
+}
+
+/* horizontally & vertically centered element (Lesson 6.4 technique) */
+.centered-banner {
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: var(--card-bg);
+  border: 1px solid var(--accent-crimson);
+  border-radius: 6px;
+  margin: 2rem 0;
+  box-shadow: 0 0 15px rgba(139, 0, 0, 0.3);
 }
 
 /* grid layout fixes */
@@ -493,6 +510,13 @@ button[type="submit"]:focus {
 
 /* responsive breakpoint */
 @media (max-width: 768px) {
+  .site-header,
+  header {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+
   .places-grid,
   .haunts-grid,
   section.grid {
