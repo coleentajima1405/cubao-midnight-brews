@@ -319,7 +319,7 @@ img[src*="owner_photo.jpg"]:hover,
   z-index: 2;
 }
 
-/* CENTERED "SUGGEST A PLACE" BUTTON */
+/* suggest a place button */
 .btn-container,
 .suggest-container,
 p:has(> a.btn-suggest),
