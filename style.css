@@ -34,11 +34,11 @@ body {
 }
 
 h1 {
-  font-size: 2.5rem;
+  font-size: 1.8rem;
   color: var(--accent-glow);
   text-transform: uppercase;
-  letter-spacing: 4px;
-  text-shadow: 0 0 15px rgba(255, 26, 64, 0.4);
+  letter-spacing: 3px;
+  text-shadow: 0 0 12px rgba(255, 26, 64, 0.4);
   margin: 0;
 }
 
@@ -55,8 +55,8 @@ h2 {
 .tagline {
   font-style: italic;
   color: var(--text-muted);
-  margin: 0 0 1rem 0;
-  font-size: 0.95rem;
+  margin: 0;
+  font-size: 0.85rem;
 }
 
 .gothic-divider {
@@ -86,13 +86,21 @@ h2 {
 header,
 .site-header {
   width: 100%;
+  max-width: 1200px;
   background: #000000;
   border-bottom: 2px solid var(--accent-crimson);
-  padding: 2.5rem 3rem;
+  padding: 1.5rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 2rem;
+  margin: 0 auto;
+}
+
+.brand-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
 }
 
 main {
@@ -114,30 +122,42 @@ footer {
 }
 
 /* Navigation fixes */
-nav {
-  display: flex;
-  align-items: center;
-}
-
 .site-header nav {
-  justify-content: flex-end;
-}
-
-body > nav {
-  width: 100%;
-  max-width: 1000px;
-  padding: 0 1rem;
-  justify-content: flex-start;
-}
-
-.site-header nav ul,
-nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
   display: flex;
-  gap: 20px;
   align-items: center;
+}
+
+.site-header nav ul {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  display: flex !important;
+  flex-direction: row !important;
+  gap: 20px !important;
+  align-items: center !important;
+}
+
+/* Footer / bottom navigation centering */
+body > nav,
+footer nav,
+.footer-nav {
+  width: 100% !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+body > nav ul,
+footer nav ul,
+.footer-nav ul {
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: center !important;
+  align-items: center !important;
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 auto !important;
+  gap: 20px !important;
 }
 
 nav a,
@@ -198,7 +218,7 @@ section.grid {
   width: 100%;
 }
 
-/* place cards responsive flex rules (Lesson 6.4 exact requirement) */
+/* place cards responsive flex rules */
 .place-card,
 article {
   flex: 1 1 240px;
@@ -529,7 +549,9 @@ button[type="submit"]:focus {
     justify-content: center;
   }
 
-  body > nav {
+  body > nav,
+  footer nav,
+  .footer-nav {
     justify-content: center;
   }
 
