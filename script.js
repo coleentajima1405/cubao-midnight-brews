@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
   } else if (placeRating >= 2.5 && placeRating <= 3.9) {
     ratingText = " Worth a visit";
   } else {
-    ratingText = "🎸 Only if you're nearby";
+    ratingText = " Only if you're nearby";
   }
 
   if (ratingEl) {
